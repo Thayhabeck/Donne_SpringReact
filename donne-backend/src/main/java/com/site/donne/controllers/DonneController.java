@@ -22,7 +22,7 @@ import com.site.donne.repositories.DonneRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/donne")
+@RequestMapping(value = "/donne/{id}")
 public class DonneController {
 
 	@Autowired
@@ -83,7 +83,7 @@ public class DonneController {
 
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
-	
+
 	@GetMapping(value = "/auth")
 	public ResponseEntity<Boolean> auth(@RequestParam String email, @RequestParam String senha) {
 

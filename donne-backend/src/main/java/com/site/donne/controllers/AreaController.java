@@ -20,7 +20,7 @@ import com.site.donne.repositories.AreaRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/area-atuacao")
+@RequestMapping(value = "/area-atuacao/{id}")
 public class AreaController {
 
 	@Autowired
