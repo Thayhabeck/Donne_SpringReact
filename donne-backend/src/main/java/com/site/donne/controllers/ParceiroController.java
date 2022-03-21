@@ -22,7 +22,7 @@ import com.site.donne.repositories.ParceiroRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/parceiro")
+@RequestMapping(value = "/parceiro/{id}")
 public class ParceiroController {
 
 	@Autowired
@@ -83,7 +83,7 @@ public class ParceiroController {
 
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 	}
-	
+
 	@GetMapping(value = "/auth")
 	public ResponseEntity<Boolean> auth(@RequestParam String email, @RequestParam String senha) {
 

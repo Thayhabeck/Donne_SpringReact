@@ -20,9 +20,9 @@ import com.site.donne.repositories.FuncaoRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/funcao")
+@RequestMapping(value = "/funcao/{id}")
 public class FuncaoController {
-	
+
 	@Autowired
 	FuncaoRepository funcaoRepository;
 
