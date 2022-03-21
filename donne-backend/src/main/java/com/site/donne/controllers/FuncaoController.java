@@ -22,7 +22,7 @@ import com.site.donne.repositories.FuncaoRepository;
 @RestController
 @RequestMapping(value = "/funcao")
 public class FuncaoController {
-	
+
 	@Autowired
 	FuncaoRepository funcaoRepository;
 
