@@ -1,0 +1,49 @@
+.navbar {
+    background-color: #E4E4F5;
+    height: 50px;
+    padding: 0px;
+}
+.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+.logo {
+    margin-top: 0;
+    margin-bottom: 5px;
+    height: 30px;
+    width: 90px;
+}
+.nav-item {
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    color: #4f4f4f;
+}
+.navbar-collapse {
+    background-color: #E4E4F5;
+}
+
+.nav-item:hover {
+    background-color: #ff3eff23;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem #555;
+}
+
+  .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      white-space: nowrap;
+      line-height: 50px; /* Vertically center the text there */
+      background-color: #E4E4F5;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 -0.25rem .75rem #555;
+  }
+  .img-recode{
+    height: 12px;
+  }

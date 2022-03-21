@@ -1,0 +1,62 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.field {
+    background-color: #ff3eff23;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 480px;
+    padding: 2rem;
+}
+.actions {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.p {
+    color: #000;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+}
+.hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+.botoes {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    color: #000;
+    width: 100%;
+    height: 40px;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 1;
+}
+.botoes:hover {
+    opacity: 0.8
+}
+
+.button-google {
+    background-image: url('../../assets/google.png');
+    background-repeat: no-repeat;
+    background-position: 4%;
+}
+
+.button-facebook {
+    background-image: url('../../assets/facebook.png');
+    background-repeat: no-repeat;
+    background-position: 4%;
+
+}
