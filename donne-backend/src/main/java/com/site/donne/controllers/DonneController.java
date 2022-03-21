@@ -22,7 +22,7 @@ import com.site.donne.repositories.DonneRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/donne/{id}")
+@RequestMapping(value = "/donne")
 public class DonneController {
 
 	@Autowired
