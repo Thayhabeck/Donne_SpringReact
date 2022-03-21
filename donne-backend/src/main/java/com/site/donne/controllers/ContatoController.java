@@ -20,7 +20,7 @@ import com.site.donne.repositories.ContatoRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/contato/{id}")
+@RequestMapping(value = "/contato")
 public class ContatoController {
 
 	@Autowired

@@ -22,7 +22,7 @@ import com.site.donne.repositories.ParceiroRepository;
 
 @CrossOrigin("*")
 @RestController
-@RequestMapping(value = "/parceiro/{id}")
+@RequestMapping(value = "/parceiro")
 public class ParceiroController {
 
 	@Autowired
