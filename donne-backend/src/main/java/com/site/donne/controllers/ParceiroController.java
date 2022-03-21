@@ -1,6 +1,7 @@
 package com.site.donne.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.site.donne.entities.Parceiro;
@@ -80,6 +82,20 @@ public class ParceiroController {
 		parceiroRepository.delete(parceiro);
 
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+	
+	@GetMapping(value = "/auth")
+	public ResponseEntity<Boolean> auth(@RequestParam String email, @RequestParam String senha) {
+
+		Optional<Parceiro> optParceiro = parceiroRepository.findByEmail(email);
+		if (optParceiro.isEmpty()) {
+			return ResponseEntity.ok().body(false);
+		}
+
+		Parceiro parceiro = optParceiro.get();
+		boolean valid = senha.equals(parceiro.getSenha());
+
+		return ResponseEntity.ok().body(valid);
 	}
 
 }
