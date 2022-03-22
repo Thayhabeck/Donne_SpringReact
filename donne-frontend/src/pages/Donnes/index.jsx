@@ -40,7 +40,7 @@ export default function Index() {
         } else {
             return (
                 <div className="d-flex justify-content-center align-content-center">
-                    <Link className="btn btn-warning" style={{ margin: '5px' }} to={`/ParceiroUpdate/${donne.idDonne}`}>
+                    <Link className="btn btn-warning" style={{ margin: '5px' }} to={`/DonneUpdate/${donne.idDonne}`}>
                         <span className="material-icons">
                             edit
                         </span>
