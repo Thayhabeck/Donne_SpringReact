@@ -10,7 +10,7 @@ export default function Nav() {
   const { logout, user, authenticated } = useContext(AuthContext);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   const handleNavLogin = () => {
-    setNavLogin(!navLogin);
+    !navLogin? setNavLogin(!navLogin) : setNavLogin(navLogin);
     handleNavCollapse();
   }
   const handleLogout = () => {
