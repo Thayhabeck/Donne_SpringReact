@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ParceiroService from "../../services/ParceiroService";
 import AreaService from "../../services/AreaService";
+import Header from "../../components/Header";
+import parceiroForm from "../../assets/parceiroForm.svg";
+import "./styles.css"
 
 export default function Create() {
     const [nome, setNome] = useState("");
@@ -19,12 +22,12 @@ export default function Create() {
         if (id) {
             ParceiroService.updateParceiro(id, donne)
                 .then((response) => {
-                    navigate("/");
+                    navigate("/parceiros");
                 });
         } else {
             ParceiroService.createParceiro(donne)
                 .then((response) => {
-                    navigate("/");
+                    navigate("/parceiros");
                 });
         }
     }
@@ -61,14 +64,12 @@ export default function Create() {
     }, [id]);
 
     return (
-        <div className="container py-4 mt-5">
-            <form>
-                <fieldset>
-                    <legend className="bg-dark rounded-3 p-3 text-light">
-                        <h2 className="text-center">
-                            {id ? "Editar Dados do Parceiro" : "Cadastro de Parceiro"}
-                        </h2>
-                    </legend>
+        <div className="p-0 m-0 w-100 align-content-center">
+            <Header title={id ? "Editar Dados do Parceiro" : "Cadastro de Parceiro"} />
+            <hr className="hr m-0 p-0" />
+            <div className="row m-0 p-0 justify-content-around">
+            <form className="form col-md-5 py-2 mt-2">
+                <fieldset className="field">
                     <div className="mb-3">
                         <label htmlFor="Nome" className="form-label fw-bolder">Nome</label>
                         <input type="text" id="Nome" className="form-control" placeholder="Nome"
@@ -105,9 +106,11 @@ export default function Create() {
                         </select>
                     </div>
                     <button type="submit" className="btn btn-primary" onClick={(e) => createOrEditParceiro(e)}>Enviar</button>
-                    <Link to="/" className="btn btn-danger" style={{ marginLeft: '10px' }}>Cancelar</Link>
+                    <Link to="/parceiros" className="btn btn-danger" style={{ marginLeft: '10px' }}>Cancelar</Link>
                 </fieldset>
             </form>
+            <img src={parceiroForm} alt="login" className="img-fluid col-md-3 " />
+        </div>
         </div>
     );
 }

@@ -5,10 +5,10 @@ html{
 *, *:before, *:after{
   box-sizing: inherit;
 }
-hr {
+.hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, transparent, #CCC, transparent);
+  background-image: linear-gradient(to right, #ddd, #333, #ddd);
 }
 body {
   margin: 0;

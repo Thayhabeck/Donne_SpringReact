@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ContatoService from "../../services/ContatoService";
+import Header from "../../components/Header";
 
 export default function Index() {
     const [mensagens, setMensagens] = useState([]);
@@ -32,37 +32,38 @@ export default function Index() {
     };
 
     return (
-        <div className="container py-4 mt-5">
-            <Link className="btn btn-primary" style={{ marginBottom: '10px' }} to="/contato">
-                Adicionar Mensagem
-            </Link>
-            <table className="table table-responsive table-hover table-striped">
-                <thead>
-                    <tr className="bg-dark text-light">
-                        <th>Nome</th>
-                        <th>E-mail</th>
-                        <th>Mensagem</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {mensagens.map((mensagem) => (
-                        <tr key={mensagem.idContato}>
-                            <td>{mensagem.nome}</td>
-                            <td>{mensagem.email}</td>
-                            <td>{mensagem.mensagem}</td>
-                            <td>
-                                <button className="btn btn-danger" onClick={() => deleteContato(mensagem.idContato)} style={{ margin: '5px' }}>
-                                    <span className="material-icons">
-                                        delete
-                                    </span>
-                                </button>
-                            </td>
+        <div className="p-0 m-0 w-100 ">
+            <Header title="Mensagens de usuários" />
+            <hr className="hr m-0 p-0" />
+            <div className="container">
+                <table className="table table-responsive table-hover table-striped ">
+                    <thead>
+                        <tr className="bg-dark text-light">
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Mensagem</th>
+                            <th>Ações</th>
                         </tr>
-                    ))}
+                    </thead>
+                    <tbody>
+                        {mensagens.map((mensagem) => (
+                            <tr key={mensagem.idContato}>
+                                <td>{mensagem.nome}</td>
+                                <td>{mensagem.email}</td>
+                                <td>{mensagem.mensagem}</td>
+                                <td>
+                                    <button className="btn btn-danger" onClick={() => deleteContato(mensagem.idContato)} style={{ margin: '5px' }}>
+                                        <span className="material-icons">
+                                            delete
+                                        </span>
+                                    </button>
+                                </td>
+                            </tr>
+                        ))}
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }

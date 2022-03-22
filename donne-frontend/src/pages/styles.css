@@ -1,3 +1,4 @@
+
 .form{
     display: flex;
     flex-direction: column;
@@ -6,7 +7,8 @@
     padding: 0 2rem;
 }
 .field {
-    background-color: #ff3eff23;
+  border: 2px solid #5556;
+    background-color:#9f408055;
     border-radius: 30px;
     width: 100%;
     max-width: 480px;
@@ -16,6 +18,11 @@
     display: block;
     align-items: center;
     justify-content: center;
+}
+.usuario{
+  font-size: 14px;
+  padding-top: 5px;
+  padding-right: 10px;
 }
 
 .p {
@@ -29,8 +36,13 @@
 .hr {
     border: 0;
     height: 2px;
-    background-image: linear-gradient(to right, transparent, #CCC, transparent);
-}
+    background-image: linear-gradient(to right, #ddd, #333, #ddd);
+  }
+  .hrs {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #111, #ddd);
+  }
 .botoes {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -84,4 +96,44 @@
   .carousel-inner{
     width: 100%;
     border-radius: 30px;
+  }
+  .somos1{
+    background: linear-gradient(90deg, rgba(255,188,35,.15) 0%,rgba(214,51,134,.35) 50%, rgba(159, 64, 128,.35) 100%);
+    border: 1px solid #555;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 40px;
+  
+  }
+  .person{
+    background-color: #d6338644;
+    border-radius: 20px;
+    text-align: justify;
+  }
+  .person > h3{
+    font-family: 'Baumans';
+  }
+  .somos2{
+    background: linear-gradient(90deg, rgba(159, 64, 128,.35) 0%, rgba(214,51,134,.35) 50%, rgba(255,188,35,.15) 100%);
+    border: 1px solid #555;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 40px;
+  }
+  .somos1 > h2{
+    font-family: 'Baumans';
+  }
+  .somos1 > div > h2{
+    font-family: 'Baumans';
+  }
+  .somos2 > div > h2{
+    font-family: 'Baumans';
+  }
+  .somos1 > div > p {
+    font-size: 1.2em;
+    text-align: justify;
+  }
+  .somos2 > div > p {
+    font-size: 1.2em;
+    text-align: justify;
   }

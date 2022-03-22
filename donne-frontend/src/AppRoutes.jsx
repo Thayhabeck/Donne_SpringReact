@@ -13,6 +13,7 @@ import Donnes from "./pages/Donnes"
 import DonneCreate from "./pages/Donnes/create"
 import Parceiros from "./pages/Parceiros"
 import ParceiroCreate from "./pages/Parceiros/create"
+import Somos from "./pages/Sobre"
 import { AuthProvider, AuthContext } from "./contexts/auth";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -39,6 +40,7 @@ const AppRoutes = () => {
                 <Routes>
                     <Route exact path="/login" element={<LoginPage />} />
                     <Route exact path="/" element={<HomePage />} />
+                    <Route exact path="/somos" element={<Somos />} />
                     <Route exact path="/donnes" element={<Donnes />} />
                     <Route exact path="/DonneCreate" element={<DonneCreate />} />
                     <Route exact path="/DonneUpdate/:id" element={<Private><DonneCreate /></Private>} />

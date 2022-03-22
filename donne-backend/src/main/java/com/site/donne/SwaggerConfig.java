@@ -19,7 +19,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
 		return new Docket(DocumentationType.SWAGGER_2).select()
 				.apis(RequestHandlerSelectors.basePackage("com.site.donne.controllers")).build().apiInfo(metaData());
 	}
-
+	
 	private ApiInfo metaData() {
 		return new ApiInfoBuilder()
 				.title("DONNE! - Spring Boot REST API")
