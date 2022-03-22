@@ -38,14 +38,14 @@ const AppRoutes = () => {
                 <Nav/>
                 <Routes>
                     <Route exact path="/login" element={<LoginPage />} />
-                    <Route exact path="/" element={<Private><HomePage /></Private>} />
+                    <Route exact path="/" element={<HomePage />} />
                     <Route exact path="/donnes" element={<Donnes />} />
                     <Route exact path="/DonneCreate" element={<DonneCreate />} />
-                    <Route exact path="/DonneUpdate/:id" element={<DonneCreate />} />
+                    <Route exact path="/DonneUpdate/:id" element={<Private><DonneCreate /></Private>} />
                     <Route exact path="/parceiros" element={<Parceiros />} />
                     <Route exact path="/ParceiroCreate" element={<ParceiroCreate />} />
-                    <Route exact path="/ParceiroUpdate/:id" element={<ParceiroCreate />} />
-                    <Route exact path="/mensagens" element={<Mensagens />} />
+                    <Route exact path="/ParceiroUpdate/:id" element={<Private><ParceiroCreate /></Private>} />
+                    <Route exact path="/mensagens" element={<Private><Mensagens /></Private>} />
                     <Route exact path="/contato" element={<Contato />} />
                 </Routes>
                 <Footer/>

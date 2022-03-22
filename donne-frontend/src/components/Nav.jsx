@@ -25,7 +25,7 @@ export default function Nav() {
     }
   }
   return (
-    <nav className="navbar navbar-expand-lg navbar-light border-bottom box-shadow  fixed-top" >
+    <nav className="navbar navbar-expand-lg navbar-light border-bottom box-shadow fixed-top" >
       <div className="container-fluid">
         <div className="navbar-brand">
         <img src={Logo} className="logo" alt="Logo"/>

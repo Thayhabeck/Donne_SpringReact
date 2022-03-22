@@ -8,14 +8,14 @@ export default function Create() {
     const [email, setEmail] = useState("");
     const [cnpj, setCnpj] = useState("");
     const [senha, setSenha] = useState("");
-    const [area, setArea] = useState({ idArea: null, nomeArea: "" });
+    const [area_atuacao, setArea_Atuacao] = useState({ idArea: null, nomeArea: "" });
     const [areas, setAreas] = useState([])
     const { id } = useParams();
     const navigate = useNavigate();
 
     const createOrEditParceiro = (e) => {
         e.preventDefault();
-        const donne = { nome, email, cnpj, senha, area };
+        const donne = { nome, email, cnpj, senha, area_atuacao };
         if (id) {
             ParceiroService.updateParceiro(id, donne)
                 .then((response) => {
@@ -51,7 +51,7 @@ export default function Create() {
                         setEmail(response.data.email);
                         setCnpj(response.data.cnpj);
                         setSenha("********");
-                        setArea({ idArea: response.data.area_atuacao.idArea, nomeArea: response.data.area_atuacao.nomeArea });
+                        setArea_Atuacao({ idArea: response.data.area_atuacao.idArea, nomeArea: response.data.area_atuacao.nomeArea });
                     }).catch((error) => {
                         console.log(error);
                     })
@@ -66,7 +66,7 @@ export default function Create() {
                 <fieldset>
                     <legend className="bg-dark rounded-3 p-3 text-light">
                         <h2 className="text-center">
-                            {id ? "Editar Dados da Donne" : "Cadastro de Donne!"}
+                            {id ? "Editar Dados do Parceiro" : "Cadastro de Parceiro"}
                         </h2>
                     </legend>
                     <div className="mb-3">
@@ -94,13 +94,13 @@ export default function Create() {
                             onChange={(e) => setSenha(e.target.value)} />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="area" className="form-label fw-bolder">Area de Atuação</label>
+                        <label htmlFor="area_atuacao" className="form-label fw-bolder">Area de Atuação</label>
                         <select className="form-select"
                             aria-label="Area"
-                            onChange={(e) => setArea({ idArea: Number.parseInt(e.target.value) })}>
-                            <option value="default">{id ? area.nomeArea : "Escolha um Área de Atuação"}</option>
-                            {areas.map((area) => (
-                                <option key={area.idArea} value={area.idArea}>{area.nomeArea}</option>
+                            onChange={(e) => setArea_Atuacao({ idArea: Number.parseInt(e.target.value) })}>
+                            <option value="default">{id ? area_atuacao.nomeArea : "Escolha um Área de Atuação"}</option>
+                            {areas.map((area_atuacao) => (
+                                <option key={area_atuacao.idArea} value={area_atuacao.idArea}>{area_atuacao.nomeArea}</option>
                             ))};
                         </select>
                     </div>
