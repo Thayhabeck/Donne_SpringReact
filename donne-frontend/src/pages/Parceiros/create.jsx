@@ -18,6 +18,9 @@ export default function Create() {
 
     const createOrEditParceiro = (e) => {
         e.preventDefault();
+        if (nome === "" || email === "" || cnpj === "" || senha === "" || area_atuacao.idArea === null){
+            window.alert("Preencha todos os campos!")
+        } else {
         const donne = { nome, email, cnpj, senha, area_atuacao };
         if (id) {
             ParceiroService.updateParceiro(id, donne)
@@ -29,7 +32,7 @@ export default function Create() {
                 .then((response) => {
                     navigate("/parceiros");
                 });
-        }
+        }}
     }
 
     const getAllAreas = () => {

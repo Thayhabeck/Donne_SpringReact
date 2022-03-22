@@ -13,12 +13,15 @@ export default function Contato() {
 
     const createContato = (e) => {
         e.preventDefault();
+        if (nome === "" || email === "" || mensagem === "" ){
+            window.alert("Preencha todos os campos!")
+        } else {
         const contato = { nome, email, mensagem };
         ContatoService.createContato(contato)
             .then((response) => {
                 navigate("/");
             });
-    }
+    }}
 
     return (
         <div className="p-0 m-0 w-100 align-content-center">

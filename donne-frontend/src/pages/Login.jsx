@@ -5,13 +5,17 @@ import loginImg from "../assets/loginImg.svg";
 import "./styles.css"
 
 const LoginPage = () => {
+
     const { login } = useContext(AuthContext);
 
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 
-    const handleSubmit = (event) => {
+    const handleSubmitLogin = (event) => {
         event.preventDefault();
+        if (email === "" || senha === ""){
+            window.alert("Preencha todos os campos!")
+        }
         login(email, senha);
     }
 
@@ -20,7 +24,7 @@ const LoginPage = () => {
             <Header title="Acesso de Administrador" />
             <hr className="hr m-0 p-0" />
             <div className="row m-0 p-0 justify-content-around">
-                <form className="form col-md-5 py-2 mt-2" onSubmit={handleSubmit}>
+                <form className="form col-md-5 py-2 mt-2" onSubmit={handleSubmitLogin}>
                     <fieldset className="field">
                         <legend className=" rounded-3 p-1 mb-3 text-dark">
                             <h2 className="text-center">
@@ -29,7 +33,8 @@ const LoginPage = () => {
                         </legend>
                         <div className="mb-3">
                             <label className="form-label fw-bolder" htmlFor="email">Email</label> <br />
-                            <input className="form-control" type="text" name="email" id="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <input className="form-control" type="email" name="email" id="email" placeholder="Email" 
+                            value={email} onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className="mb-3">
                             <label className="form-label fw-bolder" htmlFor="senha">Senha</label> <br />

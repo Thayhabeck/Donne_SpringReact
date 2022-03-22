@@ -18,6 +18,9 @@ export default function Create() {
 
     const createOrEditDonne = (e) => {
         e.preventDefault();
+        if (nome === "" || email === "" || cpf === "" || senha === "" || funcao.idFuncao === null){
+            window.alert("Preencha todos os campos!")
+        } else {
         const donne = { nome, email, cpf, senha, funcao };
         if (id) {
             DonneService.updateDonne(id, donne)
@@ -29,7 +32,7 @@ export default function Create() {
                 .then((response) => {
                     navigate("/donnes");
                 });
-        }
+        }}
     }
 
     const getAllFuncoes = () => {
