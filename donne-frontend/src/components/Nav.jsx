@@ -45,6 +45,36 @@ export default function Nav() {
                 Login
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/donnes" className="nav-link" onClick={handleNavCollapse}>
+                Donnes!
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/DonneCreate" className="nav-link" onClick={handleNavCollapse}>
+                Cadastro de Donnes!
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/parceiros" className="nav-link" onClick={handleNavCollapse}>
+                Parceiros
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/ParceiroCreate" className="nav-link" onClick={handleNavCollapse}>
+                Cadastro de Parceiro
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contato" className="nav-link" onClick={handleNavCollapse}>
+                Contato
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/mensagens" className="nav-link" onClick={handleNavCollapse}>
+                Mensagens
+              </Link>
+            </li>
             
           </ul>
         </div>

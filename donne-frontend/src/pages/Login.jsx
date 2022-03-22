@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { AuthContext } from "../../contexts/auth";
+import { AuthContext } from "../contexts/auth";
 import "./styles.css"
 
 const LoginPage = () => {
@@ -34,8 +34,6 @@ const LoginPage = () => {
                     <div className="d-grid gap-2 col-6 mx-auto mb-3">
                         <button className="btn btn-primary" type="submit">Entrar</button>
                     </div>
-                    <a className="mt-2" href="...">Esqueceu sua senha ?</a>
-                    <p className="mt-2">Não tem uma conta? <a href="...">Registre-se</a></p>
                     <hr className="hr" />
                     <div className="p">ou</div>
                     <hr className="hr" />
