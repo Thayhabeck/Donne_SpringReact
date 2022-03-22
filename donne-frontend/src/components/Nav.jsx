@@ -64,7 +64,7 @@ export default function Nav() {
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Donnes!
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -74,7 +74,7 @@ export default function Nav() {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Parceiros
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
