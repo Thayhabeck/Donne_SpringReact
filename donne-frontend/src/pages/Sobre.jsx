@@ -40,7 +40,7 @@ const SobrePage = () => {
                             mercado de trabalho e mudarem o cenário de suas vidas! <br />
                             Nossos parceiros, além de estarem contratando um serviço altamente eficiente através do trabalho qualificado
                             e
-                            empático de cada uma das nossas Scooteiras, também estarão ajudando a dar liberdade financeira à estas
+                            empático de cada uma das nossas Donnes!, também estarão ajudando a dar liberdade financeira à estas
                             mulheres!
                         </p>
                         <Link to="/parceiros" className="btn btn-dark text-decoration-none" >
